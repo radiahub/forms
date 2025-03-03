@@ -1,0 +1,556 @@
+<!-- ======================================================================= -->
+<!-- ======================================================================= -->
+<!--                                                                         -->
+<!-- Form container declaration                                              -->
+<!--                                                                         -->
+<!-- ======================================================================= -->
+<!-- ======================================================================= -->
+
+<div id="DIV_FORM_TEMPLATE" class="fit form overflow-y">
+
+	<div class="introduction">
+		<div class="callout"></div>
+		<div class="description">
+				<h1>Let us connect!</h1>
+				<h2><i class="zmdi zmdi-cloud-outline-alt"></i></h2>
+				<h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt</h4>
+		</div>
+		<div class="hint">
+			<h4>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h4>
+		</div>
+
+		<div class="h5" style="padding:1.75em 0.75em 0 0.75em;">
+			<input id="chipgroup_id" type="hidden" class="answer" data-options='{"type":"chipgroup","radiobox":"NO"}'/>
+			<label for="CHIP_0">
+				<div class="chip all">
+					<input id="CHIP_0" class="chipgroup_id" type="checkbox">
+					<div class="caption">All</div>
+				</div>
+			</label>
+			<label for="CHIP_1">
+				<div class="chip">
+					<input id="CHIP_1" class="chipgroup_id" type="checkbox" data-options='{"type":"checkbox"}'>
+					<div class="caption">Excepteur sint</div>
+				</div>
+			</label>
+			<label for="CHIP_2">
+				<div class="chip">
+					<input id="CHIP_2" class="chipgroup_id" type="checkbox" data-options='{"type":"checkbox"}'>
+					<div class="caption">Occaecat</div>
+				</div>
+			</label>
+		</div>
+
+		<div class="important">
+			<h4>
+				<span style="font-size:120%">*</span>&nbsp;Indicates required question 
+			</h4>
+		</div>
+	</div>
+
+	<!-- questions come here -->
+
+	<div class="padding"></div>
+
+</div>
+
+<!-- ======================================================================= -->
+<!-- ======================================================================= -->
+<!--                                                                         -->
+<!-- Form question templates                                                 -->
+<!--                                                                         -->
+<!-- ======================================================================= -->
+<!-- ======================================================================= -->
+
+<!-- *********************************************************************** -->
+<!-- *********************************************************************** -->
+
+<!--
+TEXT
+-->
+<div class="question">
+	<div class="callout"></div>
+	<div class="description">
+		<h2>This is a simple text question</h2>
+		<h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h4>
+	</div>
+	<div class="hint">
+		<h4>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h4>
+	</div>
+
+	<!--
+	<div class="input">
+		<div class="android" style="padding:0 0 0.75em 0;">
+			<input id="input_text" type="text" class="answer" data-options='{"type":"text"}' autocomplete="off" maxlength="" placeholder="Text input" style="font-size:110%;" />
+			<input id="input_tel" type="tel" class="answer" data-options='{"type":"text", "decimals":"2"}' autocomplete="off" />
+			<input id="input_password" type="password" class="answer" data-options='{"type":"text"}' maxlength="8" />
+		</div>
+	</div>
+	-->
+	<div class="input" style="height:2.4em;">
+		<div class="col-21 android fit-height flex-left">
+			<input id="input_text" type="text" class="answer" data-options='{"type":"text"}' autocomplete="off" maxlength="" placeholder="Text input" style="font-size:110%;" />
+		</div>
+		<div class="col-3 fit-height flex-right">
+			<div class="circle btn_delete flex-middle h3x" style="width:2.2rem; height:2.2rem; cursor:pointer;">
+				<i class="zmdi zmdi-close"></i>
+			</div>
+		</div>
+	</div>
+
+	<h4 class="error">Error 1004: incomplete parameter list</h4>
+</div>
+
+<!-- *********************************************************************** -->
+<!-- *********************************************************************** -->
+
+<!--
+TEXTAREA
+-->
+<div class="question">
+	<div class="callout"></div>
+	<div class="description">
+		<h2>This is a multiline question</h2>
+		<h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h4>
+	</div>
+	<div class="hint">
+		<h4>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h4>
+	</div>
+	<div class="input">
+		<div class="android" style="padding:0 0 0.75em 0;">
+			<textarea id="TA_MESSAGE" class="answer" data-options='{"type":"textarea"}' autocomplete="off" maxlength="200" placeholder="Multiline input"  oninput='this.style.height=""; this.style.height=this.scrollHeight+"px";' style="min-height:2em; max-height:8em; width:100%; overflow-y:auto; resize:none; font-size:110%;" ></textarea>
+		</div>
+		<div class="counter padding-s-top h5" style="color:var(--question-text-hint);"></div>
+	</div>
+	<h4 class="error">Error 1004: incomplete parameter list</h4>
+</div>
+
+<!-- *********************************************************************** -->
+<!-- *********************************************************************** -->
+
+<!--
+SELECT
+-->
+<!--
+var idx = myform.indexOf(input_id);
+if (idx >= 0) {
+	myform.collection[idx].options.add("value3", "Value 3");
+	delay(100, function(){ myform.set(input_id, "value3"); });
+}
+-->
+<div class="question">
+	<div class="callout"></div>
+	<div class="description">
+		<h2>This is a select question</h2>
+		<h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h4>
+	</div>
+	<div class="hint">
+		<h4>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h4>
+	</div>
+	<div class="input">
+		<div class="android" style="padding:0 0 0.25em 0; height:2.4em;">
+			<div class="fit-height flex-left">
+				<select id="SELECT_1" class="answer" style="font-size:105%;" data-options='{"type":"select"}'>
+					<option id="option_1" value="value1" selected>Value 1</option>
+					<option id="option_2" value="value2">Value 2</option>
+				</select>
+			</div>
+		</div>
+	</div>
+	<h4 class="error">Error 1004: incomplete parameter list</h4>
+</div>
+
+<!-- *********************************************************************** -->
+<!-- *********************************************************************** -->
+
+<!--
+RADIO GROUP
+-->
+<div class="question">
+	<div class="callout"></div>
+	<div class="description">
+		<h2>This is a radio group input</h2>
+		<h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h4>
+	</div>
+	<div class="hint">
+		<h4>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h4>
+	</div>
+	<div class="input h5" style="padding:0 0 0 0.75em;">
+		<input id="RADIO_BTN" type="hidden" class="answer" data-options='{"type":"radiobox"}'/>
+		<div style="height:2.2em;">
+			<label for="RADIO_BTN_1">
+				<div class="float-left padding-s-right fit-height flex-left">
+					<div class="radiobox">
+						<input name="RADIO_BTN" id="RADIO_BTN_1" type="radio" value="value1" checked="checked">
+						<div class="radiomark"></div>
+					</div>
+				</div>
+				<div class="float-left fit-height flex-left" style="font-size:110%;">
+					Excepteur sint occaecat
+				</div>
+			</label>
+		</div>
+		<div style="height:2.2em;">
+			<label for="RADIO_BTN_2">
+				<div class="float-left padding-s-right fit-height flex-left">
+					<div class="radiobox">
+						<input name="RADIO_BTN" id="RADIO_BTN_2" type="radio" value="value2">
+						<div class="radiomark"></div>
+					</div>
+				</div>
+				<div class="float-left fit-height flex-left" style="font-size:110%;">
+					sunt in culpa qui officia
+				</div>
+			</label>
+		</div>
+	</div>
+	<h4 class="error">Error 1004: incomplete parameter list</h4>
+</div>
+
+<!-- *********************************************************************** -->
+<!-- *********************************************************************** -->
+
+<!--
+CHECKBOX AND SWITCH
+-->
+<div class="question">
+	<div class="callout"></div>
+	<div class="description">
+		<h2>This is a checkbox input</h2>
+		<h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h4>
+	</div>
+	<div class="hint">
+		<h4>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h4>
+	</div>
+	<div class="input h5" style="padding:0 0 0 0.75em;">
+		<div style="height:2.2em;">
+			<label for="CB_1">
+				<div class="float-left padding-m-right fit-height flex-left">
+					<div class="checkbox">
+						<input id="CB_1" class="answer" type="checkbox" data-options='{"type":"checkbox"}' checked="checked">
+						<div class="checkmark"></div>
+					</div>
+				</div>
+				<div class="float-left fit-height flex-left" style="font-size:110%;">
+					Excepteur sint occaecat
+				</div>
+			</label>
+		</div>
+		<div style="height:2.2em;">
+			<label for="CB_2">
+				<div class="float-left padding-m-right fit-height flex-left">
+					<div class="checkbox">
+						<input id="CB_2" class="answer" type="checkbox" data-options='{"type":"checkbox"}' checked="checked">
+						<div class="checkmark"></div>
+					</div>
+				</div>
+				<div class="float-left fit-height flex-left" style="font-size:110%;">
+					sunt in culpa qui officia
+				</div>
+			</label>
+		</div>
+	</div>
+	<h4 class="error">Error 1004: incomplete parameter list</h4>
+</div>
+
+<div class="question">
+	<div class="callout"></div>
+	<div class="description">
+		<h2>This is a switch input</h2>
+		<h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h4>
+	</div>
+	<div class="hint">
+		<h4>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h4>
+	</div>
+	<div class="input h5" style="padding:0 0.75em 0 0.75em;">
+
+		<div style="height:2.2em;">
+			<label for="SWITCH_1">
+				<div class="col-20 fit-height flex-left" style="font-size:110%;">
+					Excepteur sint occaecat
+				</div>
+				<div class="col-4 fit-height flex-right">
+					<div class="switch">
+						<input id="SWITCH_1" class="answer" type="checkbox" data-options='{"type":"checkbox"}' checked="checked">
+						<span class="slider"></span>
+					</div>
+				</div>
+			</label>
+		</div>
+		<div style="height:2.2em;">
+			<label for="SWITCH_2">
+				<div class="col-20 fit-height flex-left" style="font-size:110%;">
+					Lorem ipsum dolor sit amet
+				</div>
+				<div class="col-4 fit-height flex-right">
+					<div class="switch">
+						<input id="SWITCH_2" class="answer" type="checkbox" data-options='{"type":"checkbox"}' checked="checked">
+						<span class="slider"></span>
+					</div>
+				</div>
+			</label>
+		</div>
+
+	</div>
+	<h4 class="error">Error 1004: incomplete parameter list</h4>
+</div>
+
+<!-- *********************************************************************** -->
+<!-- *********************************************************************** -->
+
+<!--
+CHIPS GROUP
+-->
+<!--
+//radiobox="YES"
+myform.set(input_id, "CHIP_1");
+//radiobox="NO"
+myform.set(input_id, { CHIP_1: true, CHIP_2: true });
+-->
+<div class="h5" style="padding:1.75em 0.75em 0 0.75em;">
+	<input id="chipgroup_id" type="hidden" class="answer" data-options='{"type":"chipgroup","radiobox":"NO"}'/>
+	<label for="CHIP_0">
+		<div class="chip all">
+			<input id="CHIP_0" class="chipgroup_id" type="checkbox">
+			<div class="caption">All</div>
+		</div>
+	</label>
+	<label for="CHIP_1">
+		<div class="chip">
+			<input id="CHIP_1" class="chipgroup_id" type="checkbox" data-options='{"type":"checkbox"}'>
+			<div class="caption">Excepteur sint</div>
+		</div>
+	</label>
+	<label for="CHIP_2">
+		<div class="chip">
+			<input id="CHIP_2" class="chipgroup_id" type="checkbox" data-options='{"type":"checkbox"}'>
+			<div class="caption">Occaecat</div>
+		</div>
+	</label>
+</div>
+
+<!-- *********************************************************************** -->
+<!-- *********************************************************************** -->
+
+<!-- 
+SINGLE IMAGE
+-->
+<div class="question">
+
+	<div class="thumbnail border-1-px-bottom border-dark" style="cursor:zoom-in; min-height:70px; background-color:var(--control-off-background);">
+	<!--
+	<div class="thumbnail" style="cursor:zoom-in; min-height:70px; background-color:var(--control-off-background);">
+	-->
+		<input id="image_binary_id" type="hidden" class="answer" value="" data-options='{"type":"single_image", "imgwidth":"500", "view_resize":"YES", "noimage":"[libpath]img/useprofile.png", "div_menu":"DIV_IMAGE_MENU" }'>
+		<div class="absolute btn_image_menu circle flex-middle overflow-none shadow-02" style="width:40px; height:40px; right: 15px; bottom:15px; background-color:var(--control-on-background); color:var(--control-on-text); cursor:pointer;">
+			<i class="fa fa-camera h3"></i>
+		</div>
+	</div>
+
+	<h4 class="error">Error 1004 question: incomplete parameter list</h4>
+
+</div>
+
+<div class="question">
+
+	<div class="flex-middle" style="height:160px;">
+		<div class="overflow-none" style="height:154px; width:154px;">
+			<div class="thumbnail circle overflow-none" style="height:150px; width:150px; background-color:var(--control-off-background);">
+				<input id="image_binary_id" type="hidden" class="answer" value="" data-options='{"type":"single_image", "imgwidth":"500", "view_resize":"NO", "noimage":"[libpath]img/useprofile.png", "div_menu":"DIV_IMAGE_MENU" }'>
+			</div>
+			<div class="absolute btn_image_menu circle flex-middle overflow-none shadow-02" style="width:50px; height:50px; right: 15px; bottom:15px; background-color:var(--control-on-background); color:var(--control-on-text); cursor:pointer;">
+				<i class="fa fa-camera h3"></i>
+			</div>
+		</div>
+	</div>
+
+	<h4 class="error">Error 1004 question: incomplete parameter list</h4>
+
+</div>
+
+<!-- TO POSITION AT THE END OF THE HTML SCRIPT -->
+<div id="DIV_IMAGE_MENU" class="page-docking-bottom modal-cover" style="top:60px; left:0px; width:400px; max-width:100%; height:calc(100% - 60px); display:none;">
+	<div class="page-docking-bottom menu radius-medium radius-top shadow-02" style="height:auto;">
+
+		<div class="flex-middle" style="height:20px;">
+			<div class="top-handle" style="width:20%;"></div>
+		</div>
+
+		<div>
+			<div class="btn_delete" style="height:40px; padding:0 1em;">
+				<div class="col-2 fit-height flex-left padding-m-right">
+					<i class="zmdi zmdi-delete h2"></i>
+				</div>
+				<div class="col-22 fit-height flex-left">
+					Delete
+				</div>
+			</div>
+			<div class="btn_reset" style="height:40px; padding:0 1em;">
+				<div class="col-2 fit-height flex-left padding-m-right">
+					<i class="zmdi zmdi-refresh h2"></i>
+				</div>
+				<div class="col-22 fit-height flex-left">
+					Reload
+				</div>
+			</div>
+			<!--
+			<div class="btn_edit" style="height:40px; padding:0 1em;">
+				<div class="col-2 fit-height flex-left padding-m-right">
+					<i class="zmdi zmdi-edit h2"></i>
+				</div>
+				<div class="col-22 fit-height flex-left">
+					Edit
+				</div>
+			</div>
+			-->
+			<div class="btn_gallery" style="height:40px; padding:0 1em;">
+				<div class="col-2 fit-height flex-left padding-m-right">
+					<i class="zmdi zmdi-collection-image-o h2"></i>
+				</div>
+				<div class="col-22 fit-height flex-left">
+					Gallery
+				</div>
+			</div>
+			<div class="btn_camera" style="height:40px; padding:0 1em;">
+				<div class="col-2 fit-height flex-left padding-m-right">
+					<i class="zmdi zmdi-collection-image-o h2"></i>
+				</div>
+				<div class="col-22 fit-height flex-left">
+					Camera
+				</div>
+			</div>
+			<!--
+			<div style="height:20px;"></div>
+			-->
+		</div>
+
+	</div>
+</div>
+
+<!-- *********************************************************************** -->
+<!-- *********************************************************************** -->
+
+<!-- 
+PHONE NUMBER INPUT
+-->
+<div class="question">
+
+	<div class="callout"></div>
+	<div class="description">
+		<h2>This is a simple text question</h2>
+		<h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h4>
+	</div>
+	<div class="hint">
+		<h4>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h4>
+	</div>
+
+	<div style="padding:0 3.5em 0.75em 2.5em;">
+		
+		<div class="android" style="height:2em;">
+			<div class="col-5"></div>
+			<div class="col-1"></div>
+			<div class="col-15 overflow-none fit-height flex-left">
+				<div class="fit-width" style="font-size:105%;">
+					<select id="select_country_code">
+						<option value="0">Select a country</option>
+					</select>
+				</div>
+			</div>
+		</div>
+
+		<div class="margin-s-top" style="height:2em;">
+			<div id="display_country_code" class="col-5 fit-height flex-left border-1-px-bottom border-dark" style="padding-bottom:0.15em; font-size:105%;">+62</div>
+			<div class="col-1"></div>
+			<div class="col-18 android overflow-none fit-height">
+				<div class="col-20 fit-height flex-left">
+					<input id="INP_PHONE_NO" class="answer" type="tel" data-options='{"type":"phone","select_country_code":"select_country_code","display_country_code":"display_country_code"}' placeholder="Phone number" style="font-size:105%;">
+				</div>
+				<div class="col-4 fit-height flex-right">
+					<div class="btn_address_book circle flex-middle" style="height:2.0em; width:2.0em;">
+						<i class="fa fa-address-book-o" style="font-size:120%;"></i>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<h4 class="error">Error 1004: incomplete parameter list</h4>
+
+</div>
+
+<!-- *********************************************************************** -->
+<!-- *********************************************************************** -->
+
+<!-- 
+FILE UPLOAD
+-->
+<div class="question" style="height:12em;">
+	<input id="file_upload_1" type="hidden" class="answer" value="" data-options='{"type":"fileupload", "maxfilesize":"1048576", "imgwidth":"500"}'>
+	<div class="splash flex-middle overlay" style="height:12em; cursor:pointer; display:flex;">
+		<div style="width:fit-content;"><img src="../lib/img/doc_other_file.png" style="height:2.0em;"></div>
+		<div style="width:fit-content;" class="padding-m-top h5 text-center">Click to upload (max 1MB)<br>An image will be resized</div>
+	</div>
+	<div class="details" style="height:12em; display:none;">
+		<div class="absolute thumbnail overlay" style="height:5em; cursor:zoom-in;">
+			<div class="nopreview fit flex-middle">
+				<table>
+					<tr>
+						<td style="padding-right:0.75em;"><img src="../lib/img/doc_other_file.png" class="nopreviewimg" style="height:1.8em;"></td>
+						<td>No&nbsp;preview&nbsp;available</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+		<div class="absolute" style="top:5.5em; left:0px; height:5.5em; width:100%; padding: 0 0.75em;">
+			<div style="width:100%; height:auto;">
+				<div>
+					<div class="col-20 flex-left" style="padding-top:0.25em;">
+						<input class="filename" style="width:100%;" readonly="true">
+					</div>
+					<div class="col-4 flex-right">
+						<div class="remove circle flex-middle" style="height:1.8em; width:1.8em; cursor:pointer;">
+							<i class="fa fa-trash-o" style="font-size:120%"></i> 
+						</div>
+					</div>
+				</div>
+				<div class="filesize h5">185.8MB</div>
+				<h4 class="error" style="padding-left:0px;margin-block-start: 1.0em;">Error 1004: incomplete parameter list</h4>
+			</div>
+		</div>					
+	</div>
+</div>
+
+<!-- *********************************************************************** -->
+<!-- *********************************************************************** -->
+
+<!--
+QRCODE (READONLY)
+-->
+<div class="question">
+	<div class="description">
+		<h2>This is a simple text question</h2>
+		<h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h4>
+	</div>
+	<div class="input">
+		<input id="inp_qrcode" class="answer" data-options='{"type":"qr","target":"show_qrcode"}' type="hidden" value=""/>
+		<div class="square" style="width:60%; margin:0 auto;">
+			<div id="show_qrcode" class="content border-1-px border-light bg-white" style="padding:10px;"></div>
+		</div>
+	</div>
+	<div class="hint">
+		<h4>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h4>
+	</div>
+	<div class="hint">
+		<div class="col-9" style="padding-bottom:1.5em;">
+			<div class="button btn_download" style="padding:0.5em;">Save QR image</div>
+		</div>
+		<div class="col-6"></div>
+		<div class="col-9" style="padding-bottom:1.5em;">
+			<div class="button btn_copy" style="padding:0.5em;">Copy QR text</div>
+		</div>
+	</div>
+</div>
+
+<!-- *********************************************************************** -->
+<!-- *********************************************************************** -->
+

@@ -1,0 +1,47 @@
+radiahub.htdocs/applets/forms "Forms"
+------------------------------------
+
+package_id  : radiahub.htdocs.applet.forms
+Author      : Denis Auguste Patrice <radiahub@gmail.com>
+Description : Forms applet library
+Timestamp   : [2025]-[Mar]-[03] [23]:[59]
+
+
+[X] UNDERSTAND THE APPLICATION TO BUILD
+
+	[ ] Native application
+	[ ] Hybrid stand-alone Cordova application
+	[ ] Web application viewed in Cordova InAppBrowser
+	[ ] Hybrid Cordova application using InAppBrowser proxy
+	[X] Web site
+
+
+[X] SETUP GITHUB REPOSITORY
+
+	[X] Public repository
+	[ ] Private repository
+
+	Create github repository radiahub/htdocs
+	Setup initial .gitignore
+	Commit initial .gitignore as "Initial .gitignore"
+
+
+[X] DEPLOY GIT VERSION CONTROL
+
+	NB: you may have to restart windows to access the directories
+
+	cd C:\bin\xampp\htdocs\applets
+	Rename C:\bin\xampp\htdocs\applets\forms to C:\bin\xampp\htdocs\applets\forms.src
+	gh repo clone radiahub/forms
+	Rename C:\bin\xampp\htdocs\applets\forms to C:\bin\xampp\htdocs\applets\forms.git
+	Rename C:\bin\xampp\htdocs\applets\forms.src to C:\bin\xampp\htdocs\applets\forms
+	xcopy forms.git forms /s /r /e /v /h /y
+	Delete C:\bin\xampp\htdocs\applets\forms.git
+	Open htdocs in Visual Code
+	Check GIT accessed properly
+	Initial commit to Github
+	Initial push action
+  Verify data on Github
+	
+
+End of file: htdocs.history
