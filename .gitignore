@@ -1,3 +1,57 @@
+#Version control directory and directories created by visual code
+.git/
+typings/
+.vscode/
+
+#Deployment security
+.well-known
+radiahub.22web.org/
+firebaseConfig.php
+
+#Node artifact files
+node_modules/
+dist/
+
+#Thumbnails created by windows
+Thumbs.db
+
+#Directories created by xampp
+dashboard/
+webalizer/
+xampp/
+
+#Imported libraries
+import/
+fonts/
+google-api-php-client-2.2.4/
+
+#Symbolic links
+*.lnk
+
+#Deprecated scripts
+deprecated/
+_deprecated/
+
+#Downloadable documents
+download/
+*.apk
+
+#External resource documents
+documents/
+inspiration/
+
+#External resource files
+resources/
+
+#Large database dump files
+dump/
+
+#radiahub projects
+applets/
+iab/
+pager/
+www/
+
 # Compiled class file
 *.class
 
